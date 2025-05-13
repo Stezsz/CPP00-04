@@ -80,6 +80,6 @@ These modules are part of the C++ introduction series at 42 School, focused on p
 
 ---
 
-> ✅ **Final Grade: 0/100**
+> ✅ **Final Grade: /100**
 > Projects made at [42 Lisboa](https://www.42lisboa.com/pt/)
 > 👤 Author: Stephan Rodrigues Lassaponari ([@Stezsz](https://github.com/Stezsz))
