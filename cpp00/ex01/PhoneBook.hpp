@@ -1,38 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Contact.hpp                                        :+:      :+:    :+:   */
+/*   PhoneBook.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: strodrig <strodrig@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/12 17:55:48 by strodrig          #+#    #+#             */
-/*   Updated: 2025/05/12 17:55:48 by strodrig         ###   ########.fr       */
+/*   Created: 2025/05/14 15:11:56 by strodrig          #+#    #+#             */
+/*   Updated: 2025/05/14 15:11:56 by strodrig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CONTACT_HPP
-# define CONTACT_HPP
+#ifndef PHONEBOOK_HPP
+# define PHONEBOOK_HPP
 
 # include <iostream>
 # include <iomanip>
 # include <string>
+# include <Contact.hpp>
 
-class Contact {
+class PhoneBook {
 	private:
-		std::string	first_name;
-		std::string	last_name;
-		std::string	nickname;
-		std::string	phone_number;
-		std::string	darkest_secret;
+		Contact	contacts[8];
+		size_t		index;
+		size_t		capacity;
 	public:
-		Contact();
-		~Contact();
-		std::string getContactInfo(size_t type);
-		std::string &setContactInfo(size_t type);
-		bool setContact(void);
+		PhoneBook(void);
+		~PhoneBook(void);
+		Contact		&setContact(void);
+		Contact		getContact(size_t index);
+		size_t	getCapacity(void);
 };
-
-bool onlyDigits(std::string str);
-bool onlyWhiteSpace(std::string str);
 
 #endif
