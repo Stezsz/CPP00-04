@@ -5,25 +5,21 @@
 #                                                     +:+ +:+         +:+      #
 #    By: strodrig <strodrig@student.42lisboa.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2025/05/12 17:54:06 by strodrig          #+#    #+#              #
-#    Updated: 2025/05/12 17:54:06 by strodrig         ###   ########.fr        #
+#    Created: 2025/05/15 11:18:11 by strodrig          #+#    #+#              #
+#    Updated: 2025/05/15 11:18:11 by strodrig         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		= PhoneBook
+NAME		= tests
 
 CC			= c++
-CURR_DIR	= ./
-FLAGS		= -Wall -Wextra -Werror -std=c++98 -I $(CURR_DIR)
+FLAGS		= -Wall -Wextra -Werror -std=c++98 -I.
 RM			= rm -rf
 
-OBJDIR = .objFiles
-
-FILES		= main Contact PhoneBook
-
+OBJDIR		= .objFiles
+FILES		= Account tests
 SRC			= $(FILES:=.cpp)
 OBJ			= $(addprefix $(OBJDIR)/, $(FILES:=.o))
-HEADER		= Contact.hpp PhoneBook.hpp
 
 #Colors:
 GREEN		=	\e[92;5;118m
@@ -36,13 +32,13 @@ CURSIVE		=	\e[33;3m
 
 all: $(NAME)
 
-$(NAME): $(OBJ) $(HEADER)
-	@$(CC) $(OBJ) $(OPTS) -o $(NAME)
-	@printf "$(_SUCCESS) $(GREEN)- Executable ready.\n$(RESET)"
+$(NAME): $(OBJ)
+	@$(CC) $(OBJ) -o $(NAME)
+	@printf "$(GREEN)- Executable ready.\n$(RESET)"
 
-$(OBJDIR)/%.o: %.cpp $(HEADER)
-	@mkdir -p $(dir $@)
-	@$(CC) $(FLAGS) $(OPTS) -c $< -o $@
+$(OBJDIR)/%.o: %.cpp
+	@mkdir -p $(OBJDIR)
+	@$(CC) $(FLAGS) -c $< -o $@
 
 clean:
 	@$(RM) $(OBJDIR)
