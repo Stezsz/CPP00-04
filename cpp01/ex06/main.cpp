@@ -6,11 +6,11 @@
 /*   By: strodrig <strodrig@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/16 16:31:38 by strodrig          #+#    #+#             */
-/*   Updated: 2025/05/16 16:31:38 by strodrig         ###   ########.fr       */
+/*   Updated: 2025/05/16 17:18:33 by strodrig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Harl.hpp"
+#include "Harl.hpp
 
 int	main(int ac, char **av) {
 	if (ac != 2) {
