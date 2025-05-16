@@ -1,0 +1,5 @@
+Hello world!
+This is a test file.
+Replace the word 'test' with something else.
+Testing is important. test test test!
+End of the test file.
