@@ -58,5 +58,5 @@ int main() {
 	test_animals();
 	test_deep_copy();
 	test_array();
-	return 0;
+	return (0);
 }
