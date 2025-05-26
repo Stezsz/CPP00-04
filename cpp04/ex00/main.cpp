@@ -18,19 +18,39 @@
 
 int main()
 {
-	const Animal* meta = new Animal();
-	const Animal* j = new Dog();
-	const Animal* i = new Cat();
+	std::cout << "=== Proper polymorphism ===" << std::endl;
 
-	std::cout << j->getType() << " " << std::endl;
-	std::cout << i->getType() << " " << std::endl;
-	i->makeSound(); //will output the cat sound!
-	j->makeSound();
-	meta->makeSound();
+	const Animal* animal = new Animal();
+	const Animal* dog = new Dog();
+	const Animal* cat = new Cat();
 
-	delete meta;
-	delete j;
-	delete i;
+	std::cout << "\nTypes:" << std::endl;
+	std::cout << "dog: " << dog->getType() << std::endl;
+	std::cout << "cat: " << cat->getType() << std::endl;
+
+	std::cout << "\nSounds:" << std::endl;
+	dog->makeSound();
+	cat->makeSound();
+	animal->makeSound();
+
+	delete animal;
+	delete dog;
+	delete cat;
+
+	std::cout << "\n=== Wrong polymorphism ===" << std::endl;
+
+	const WrongAnimal* wrongAnimal = new WrongAnimal();
+	const WrongAnimal* wrongCat = new WrongCat();
+
+	std::cout << "\nTypes:" << std::endl;
+	std::cout << "wrongCat: " << wrongCat->getType() << std::endl;
+
+	std::cout << "\nSounds:" << std::endl;
+	wrongCat->makeSound();
+	wrongAnimal->makeSound();
+
+	delete wrongAnimal;
+	delete wrongCat;
 
 	return 0;
 }
