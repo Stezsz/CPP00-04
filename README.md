@@ -19,7 +19,7 @@ These modules are part of the C++ introduction series at 42 School, focused on p
 - Understand class structure and object instantiation
 - Learn how streams work in C++
 
-> ✅ **Final Grade: /100**
+> ✅ **Final Grade: 100/100**
 
 ---
 
