@@ -6,11 +6,11 @@
 /*   By: strodrig <strodrig@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/22 11:12:29 by strodrig          #+#    #+#             */
-/*   Updated: 2025/05/22 11:12:29 by strodrig         ###   ########.fr       */
+/*   Updated: 2025/07/19 14:27:33 by strodrig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "FragTrap.hpp"
+#include "DiamondTrap.hpp"
 
 int	main(void) {
 	std::string	fighter("Player 1");
@@ -18,32 +18,29 @@ int	main(void) {
 	std::string	reader("answer");
 
 	{
-		std::cout << RED_TEXT << "=================================TEST 1===============================" << std::endl;
-		std::cout << center("TESTING FRAGTRAP DEAFULT CONSTRUCTOR", 70) << std::endl << WHITE_TEXT;
+		std::cout << BLUE_TEXT << "=================================TEST 1===============================" << std::endl;
+		std::cout << center("TESTING DIAMONDTRAP DEAFULT CONSTRUCTOR", 70) << std::endl << WHITE_TEXT;
 		{
-			FragTrap	a;
+			DiamondTrap	a;
 			(void)a;
 		}
-		std::cout << RED_TEXT << "=================================TEST 1================================" << std::endl;
-		std::cout << std::endl << WHITE_TEXT;
+		std::cout << BLUE_TEXT << "=================================TEST 1===============================" << std::endl << WHITE_TEXT;
 	}
 
 	while (!std::cin.eof() && !reader.empty()) {
 		std::cout << "Press Enter to continue ..." << std::endl;
 		std::getline(std::cin, reader);
 	}
-
 	{
-		std::cout << GREEN_TEXT << "=================================TEST 2===============================" << std::endl;
-		std::cout << center("TESTING FRAGTRAP COPY CONSTRUCTOR", 70) << std::endl << WHITE_TEXT;
+		std::cout << RED_TEXT << "=================================TEST 2===============================" << std::endl;
+		std::cout << center("TESTING DIAMONDTRAP COPY CONSTRUCTOR", 70) << std::endl << WHITE_TEXT;
 		{
-			FragTrap	a;
-			FragTrap	b(a);
+			DiamondTrap	a;
+			DiamondTrap	b(a);
 			(void)a;
 			(void)b;
 		}
-		std::cout << GREEN_TEXT << "=================================TEST 2===============================" << std::endl;
-		std::cout << std::endl << WHITE_TEXT;
+		std::cout << RED_TEXT << "=================================TEST 2===============================" << std::endl << WHITE_TEXT;
 	}
 
 	reader = "answer";
@@ -54,13 +51,13 @@ int	main(void) {
 
 	{
 		std::cout << YELLOW_TEXT << "=================================TEST 3===============================" << std::endl;
-		std::cout << center("TESTING FRAGTRAP STRING CONSTRUCTOR", 70) << std::endl << WHITE_TEXT;
+		std::cout << center("TESTING DIAMONDTRAP STRING CONSTRUCTOR", 70) << std::endl << WHITE_TEXT;
 		{
-			FragTrap	a(fighter);
+			DiamondTrap	a(fighter);
 			(void)a;
 		}
 		std::cout << YELLOW_TEXT << "=================================TEST 3===============================" << std::endl;
-		std::cout << std::endl << WHITE_TEXT;
+		std::cout << WHITE_TEXT;
 	}
 
 	reader = "answer";
@@ -71,10 +68,10 @@ int	main(void) {
 
 	{
 		std::cout << BLUE_TEXT << "=================================TEST 4===============================" << std::endl;
-		std::cout << center("TESTING FRAGTRAP COPY ASSGINMENT", 70) << std::endl << WHITE_TEXT;
+		std::cout << center("TESTING DIAMONDTRAP COPY ASSIGNMENT", 70) << std::endl << WHITE_TEXT;
 		{
-			FragTrap	a(fighter);
-			FragTrap	b;
+			DiamondTrap	a(fighter);
+			DiamondTrap	b;
 			(void)a;
 
 			b = a;
@@ -92,9 +89,9 @@ int	main(void) {
 
 	{
 		std::cout << MAGENTA_TEXT << "=================================TEST 5===============================" << std::endl;
-		std::cout << center("TESTING FRAGTRAP MEMBER FUNCTIONS 0", 70) << std::endl << WHITE_TEXT;
+		std::cout << center("TESTING DIAMONDTRAP MEMBER FUNCTIONS 0", 70) << std::endl << WHITE_TEXT;
 		{
-			FragTrap	a(fighter);
+			DiamondTrap	a(fighter);
 
 			a.attack(enemy);
 			a.takeDamage(3);
@@ -102,7 +99,9 @@ int	main(void) {
 			a.takeDamage(45);
 			a.attack(enemy);
 			a.beRepaired(5);
+			a.guardGate();
 			a.highFiveGuys();
+			a.whoAmI();
 		}
 		std::cout << MAGENTA_TEXT << "=================================TEST 5===============================" << std::endl;
 		std::cout << std::endl << WHITE_TEXT;
@@ -116,9 +115,9 @@ int	main(void) {
 
 	{
 		std::cout << RED_TEXT << "=================================TEST 6===============================" << std::endl;
-		std::cout << center("TESTING FRAGTRAP MEMBER FUNCTIONS 1", 70) << std::endl << WHITE_TEXT;
+		std::cout << center("TESTING DIAMONDTRAP MEMBER FUNCTIONS 1", 70) << std::endl << WHITE_TEXT;
 		{
-			FragTrap	a(fighter);
+			DiamondTrap	a(fighter);
 
 			a.attack(enemy);
 			a.takeDamage(5);
@@ -126,12 +125,14 @@ int	main(void) {
 			a.takeDamage(5);
 			a.attack(enemy);
 			a.beRepaired(5);
-			for (int i = 0; i < 96; i++) {
+			for (int i = 0; i < 50; i++) {
 				a.attack(enemy);
 			}
 			a.beRepaired(5);
 			a.attack(enemy);
+			a.guardGate();
 			a.highFiveGuys();
+			a.whoAmI();
 		}
 		std::cout << RED_TEXT << "=================================TEST 6===============================" << std::endl;
 		std::cout << std::endl << WHITE_TEXT;
@@ -145,15 +146,17 @@ int	main(void) {
 
 	{
 		std::cout << GREEN_TEXT << "=================================TEST 7===============================" << std::endl;
-		std::cout << center("TESTING FRAGTRAP MEMBER FUNCTIONS 2", 70) << std::endl << WHITE_TEXT;
+		std::cout << center("TESTING DIAMONDTRAP MEMBER FUNCTIONS 2", 70) << std::endl << WHITE_TEXT;
 		{
-			FragTrap	a(fighter);
+			DiamondTrap	a(fighter);
 
-			for (int i = 0; i < 100; i++) {
+			for (int i = 0; i < 50; i++) {
 				a.beRepaired(10);
 			}
 			a.attack(enemy);
+			a.guardGate();
 			a.highFiveGuys();
+			a.whoAmI();
 		}
 		std::cout << GREEN_TEXT << "=================================TEST 7===============================" << std::endl;
 		std::cout << std::endl << WHITE_TEXT;

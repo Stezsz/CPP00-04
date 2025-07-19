@@ -6,7 +6,7 @@
 /*   By: strodrig <strodrig@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/22 11:12:29 by strodrig          #+#    #+#             */
-/*   Updated: 2025/05/22 11:12:29 by strodrig         ###   ########.fr       */
+/*   Updated: 2025/07/19 14:32:04 by strodrig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@ int	main(void) {
 
 	{
 		std::cout << BLUE_TEXT << "=================================TEST 4===============================" << std::endl;
-		std::cout << center("TESTING CLAPTRAP COPY ASSGINMENT", 70) << std::endl << WHITE_TEXT;
+		std::cout << center("TESTING CLAPTRAP COPY ASSIGNMENT", 70) << std::endl << WHITE_TEXT;
 		{
 			ClapTrap	a(fighter);
 			ClapTrap	b;

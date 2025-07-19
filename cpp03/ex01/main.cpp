@@ -6,7 +6,7 @@
 /*   By: strodrig <strodrig@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/22 11:12:29 by strodrig          #+#    #+#             */
-/*   Updated: 2025/05/22 11:12:29 by strodrig         ###   ########.fr       */
+/*   Updated: 2025/07/19 14:31:32 by strodrig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ int	main(void) {
 
 	{
 		std::cout << RED_TEXT << "=================================TEST 1===============================" << std::endl;
-		std::cout << center("TESTING CLAPTRAP DEAFULT CONSTRUCTOR", 70) << std::endl << WHITE_TEXT;
+		std::cout << center("TESTING SCAVTRAP DEAFULT CONSTRUCTOR", 70) << std::endl << WHITE_TEXT;
 		{
-			ClapTrap	a;
+			ScavTrap	a;
 			(void)a;
 		}
 		std::cout << RED_TEXT << "=================================TEST 1================================" << std::endl;
@@ -35,10 +35,10 @@ int	main(void) {
 
 	{
 		std::cout << GREEN_TEXT << "=================================TEST 2===============================" << std::endl;
-		std::cout << center("TESTING CLAPTRAP COPY CONSTRUCTOR", 70) << std::endl << WHITE_TEXT;
+		std::cout << center("TESTING SCAVTRAP COPY CONSTRUCTOR", 70) << std::endl << WHITE_TEXT;
 		{
-			ClapTrap	a;
-			ClapTrap	b(a);
+			ScavTrap	a;
+			ScavTrap	b(a);
 			(void)a;
 			(void)b;
 		}
@@ -54,9 +54,9 @@ int	main(void) {
 
 	{
 		std::cout << YELLOW_TEXT << "=================================TEST 3===============================" << std::endl;
-		std::cout << center("TESTING CLAPTRAP STRING CONSTRUCTOR", 70) << std::endl << WHITE_TEXT;
+		std::cout << center("TESTING SCAVTRAP STRING CONSTRUCTOR", 70) << std::endl << WHITE_TEXT;
 		{
-			ClapTrap	a(fighter);
+			ScavTrap	a(fighter);
 			(void)a;
 		}
 		std::cout << YELLOW_TEXT << "=================================TEST 3===============================" << std::endl;
@@ -71,10 +71,10 @@ int	main(void) {
 
 	{
 		std::cout << BLUE_TEXT << "=================================TEST 4===============================" << std::endl;
-		std::cout << center("TESTING CLAPTRAP COPY ASSGINMENT", 70) << std::endl << WHITE_TEXT;
+		std::cout << center("TESTING SCAVTRAP COPY ASSIGNMENT", 70) << std::endl << WHITE_TEXT;
 		{
-			ClapTrap	a(fighter);
-			ClapTrap	b;
+			ScavTrap	a(fighter);
+			ScavTrap	b;
 			(void)a;
 
 			b = a;
@@ -92,9 +92,9 @@ int	main(void) {
 
 	{
 		std::cout << MAGENTA_TEXT << "=================================TEST 5===============================" << std::endl;
-		std::cout << center("TESTING CLAPTRAP MEMBER FUNCTIONS 0", 70) << std::endl << WHITE_TEXT;
+		std::cout << center("TESTING SCAVTRAP MEMBER FUNCTIONS 0", 70) << std::endl << WHITE_TEXT;
 		{
-			ClapTrap	a(fighter);
+			ScavTrap	a(fighter);
 
 			a.attack(enemy);
 			a.takeDamage(3);
@@ -102,6 +102,7 @@ int	main(void) {
 			a.takeDamage(45);
 			a.attack(enemy);
 			a.beRepaired(5);
+			a.guardGate();
 		}
 		std::cout << MAGENTA_TEXT << "=================================TEST 5===============================" << std::endl;
 		std::cout << std::endl << WHITE_TEXT;
@@ -115,9 +116,9 @@ int	main(void) {
 
 	{
 		std::cout << RED_TEXT << "=================================TEST 6===============================" << std::endl;
-		std::cout << center("TESTING CLAPTRAP MEMBER FUNCTIONS 1", 70) << std::endl << WHITE_TEXT;
+		std::cout << center("TESTING SCAVTRAP MEMBER FUNCTIONS 1", 70) << std::endl << WHITE_TEXT;
 		{
-			ClapTrap	a(fighter);
+			ScavTrap	a(fighter);
 
 			a.attack(enemy);
 			a.takeDamage(5);
@@ -125,11 +126,12 @@ int	main(void) {
 			a.takeDamage(5);
 			a.attack(enemy);
 			a.beRepaired(5);
-			for (int i = 0; i < 8; i++) {
+			for (int i = 0; i < 46; i++) {
 				a.attack(enemy);
 			}
 			a.beRepaired(5);
 			a.attack(enemy);
+			a.guardGate();
 		}
 		std::cout << RED_TEXT << "=================================TEST 6===============================" << std::endl;
 		std::cout << std::endl << WHITE_TEXT;
@@ -143,14 +145,15 @@ int	main(void) {
 
 	{
 		std::cout << GREEN_TEXT << "=================================TEST 7===============================" << std::endl;
-		std::cout << center("TESTING CLAPTRAP MEMBER FUNCTIONS 2", 70) << std::endl << WHITE_TEXT;
+		std::cout << center("TESTING SCAVTRAP MEMBER FUNCTIONS 2", 70) << std::endl << WHITE_TEXT;
 		{
-			ClapTrap	a(fighter);
+			ScavTrap	a(fighter);
 
-			for (int i = 0; i < 10; i++) {
+			for (int i = 0; i < 50; i++) {
 				a.beRepaired(10);
 			}
 			a.attack(enemy);
+			a.guardGate();
 		}
 		std::cout << GREEN_TEXT << "=================================TEST 7===============================" << std::endl;
 		std::cout << std::endl << WHITE_TEXT;
