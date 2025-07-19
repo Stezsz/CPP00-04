@@ -6,7 +6,7 @@
 #    By: strodrig <strodrig@student.42lisboa.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/05/22 11:12:31 by strodrig          #+#    #+#              #
-#    Updated: 2025/05/22 11:12:31 by strodrig         ###   ########.fr        #
+#    Updated: 2025/07/19 14:09:13 by strodrig         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,11 +23,11 @@ OBJ			= $(addprefix $(OBJDIR)/, $(FILES:=.o))
 HEADER		= ClapTrap.hpp
 
 #Colors:
-GREEN		=	\e[92;5;118m
-YELLOW		=	\e[93;5;226m
-GRAY		=	\e[33;2;37m
+GREEN		=	\e[32m
+YELLOW		=	\e[33m
+GRAY		=	\e[90m
 RESET		=	\e[0m
-CURSIVE		=	\e[33;3m
+CURSIVE		=	\e[3m
 
 .PHONY: all clean fclean re
 
