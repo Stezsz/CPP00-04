@@ -6,11 +6,13 @@
 /*   By: strodrig <strodrig@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/20 13:21:41 by strodrig          #+#    #+#             */
-/*   Updated: 2025/05/20 13:21:41 by strodrig         ###   ########.fr       */
+/*   Updated: 2025/07/19 13:58:32 by strodrig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Point.hpp"
+#include "Point.hpp"`
+
+//Change implementation of bsp
 
 bool isTriangle(Point const a, Point const b, Point const c) {
 	Fixed abx = b.getX() - a.getX();
