@@ -52,7 +52,7 @@ These modules are part of the C++ introduction series at 42 School, focused on p
 - Ensure safe copying and assigning of objects
 - Improve understanding of class design and maintenance
 
-> ✅ **Final Grade: /100**
+> ✅ **Final Grade: 90/100**
 
 ---
 
@@ -69,7 +69,7 @@ These modules are part of the C++ introduction series at 42 School, focused on p
 - Use virtual functions for dynamic dispatch
 - Design flexible and scalable class hierarchies
 
-> ✅ **Final Grade: /100**
+> ✅ **Final Grade: 100/100**
 
 ---
 
@@ -86,8 +86,9 @@ These modules are part of the C++ introduction series at 42 School, focused on p
 - Handle object slicing and proper memory management
 - Understand the importance of virtual destructors
 
-> ✅ **Final Grade: /100**
+> ✅ **Final Grade: 80/100**
 ---
 
 > Projects made at [42 Lisboa](https://www.42lisboa.com/pt/)
 > 👤 Author: Stephan Rodrigues Lassaponari ([@Stezsz](https://github.com/Stezsz))
+
